@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <h3>Validate email address</h3>
+    <div class="col-xs-12">
+      <form [formGroup]="userRegistrationForm" (ngSubmit)="submitEmail()">
+        <input class="form-control" type="text" placeholder="Enter your email address" formControlName="email">
+        {{email.value}}<br>
+        Touched: {{email.touched}}<br>
+        Dirty: {{email.dirty}}<br>
+        valid: {{email.valid}}<br>
+        <div *ngIf="email.invalid && (email.dirty && email.touched)">
+          <span style="color: red;">*Invalid email</span>
+        </div>
+        <hr>
+        <button type="submit" [disabled]="!userRegistrationForm.valid" class="btn btn-success">Validate Email </button>
+      </form>
+      <app-servers></app-servers>
+    </div>
+  </div>
+</div>
+<hr>
+

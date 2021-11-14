@@ -1,0 +1,11 @@
+<h3>Inside servers component</h3>
+<div>
+  <label>Filter:</label>
+  <input type="text" [formControl]="makeFilter" />
+</div>
+<ul>
+  <li *ngFor="let m of resultingMakes | async">{{ m }}</li>
+</ul>
+<hr>
+<p>The new server created is {{serverName}}</p>
+<app-server [MyName]="serverName" (ServerNameCreated)="onServerCreated($event)"></app-server>

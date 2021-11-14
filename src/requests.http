@@ -1,0 +1,29 @@
+GET https://www.google.com/search?q=Martin+Rivas
+###
+GET https://swapi.dev/api/people/1
+###
+GET https://example.com/topics/1 HTTP/1.1
+###
+GET https://vehicle-data.azurewebsites.net/api/makes?make=Porsche
+###
+// https://reqbin.com/u8oafwiv
+POST https://localhost:44315/api/services/app/Account/IsTenantAvailable
+Content-Type: application/json/html;
+
+{
+  "tenancyName": "Default"
+}
+
+//git clone https://github.com/LinkedInLearning/linq-databases-2858036.git
+###
+https://front-rush-university.api.recruitedge.live/api/services/app/UserLink/GetLinkedUsers?MaxResultCount=10&SkipCount=0&Sorting=&teamId=null
+###
+https://front-rush-university.api.recruitedge.live/api/services/app/FieldMetadata/GetFieldMetadataById?id=1
+
+###
+POST https://front-rush-university.api.recruitedge.live/api/services/app/Account/IsTenantAvailable
+Content-Type: application/json/html;
+
+{
+  "tenancyName": "Default"
+}

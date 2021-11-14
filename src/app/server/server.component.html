@@ -1,0 +1,22 @@
+<h3>My child server component!</h3>
+<label>Server name:</label>&nbsp;
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<input type="text" [(ngModel)]="serverName"  required>
+<p>{{serverName}}</p>
+<button class="button btn-primary"
+[disabled]="!allowNewServer || serverName === ''"
+(click)="onCreateServer()">Add server</button>&nbsp;
+<button
+class="button btn-primary"
+[disabled]="!allowNewServer || serverName === ''"
+(click)="onResetServer()">Reset server</button>
+{{serverName}}
+<p
+[ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverName==='Default server'}"
+[innerHtml]="serverCreateStatus"></p>
+<app-assignment1></app-assignment1>
+<!-- <div app-assignment1></div> -->
+<!-- <div class="app-assignment1"></div> -->
+<hr>
+{{name}}
